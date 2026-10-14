@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color:#7e65ac;
+  background-image: 
+    radial-gradient(rgba(1, 0, 2, 0.144) 1px, transparent 1px),
+    radial-gradient(rgba(32, 9, 32, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, #E2D9F3, #866899);
+  background-size: 20px 20px, 40px 40px, 100% 100%;
+  background-position: 0 0, 10px 10px, 0 0;
+}
+
+nav {
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid #5c4c66;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.slef-introduction {
+  color: #5c4c66;
+  padding: 0 10px;
+}
+
+.slef-introduction img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: #333;
+  border-bottom: 3px solid #333;
+  font-size: 1.8rem;
+}
+
+.Veasm {
+  width: 50px;
+  top: 60px;
+}
+
+/* 輪播圖專用 CSS */
+.project-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.grid-window {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.project-track {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 30px; 
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.project-item {
+  width: 130px; 
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle-slider {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  user-select: none;
+  transition: color 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* 底端區塊與聯絡資訊 */
+.section {
+  padding: 2rem 1rem;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1c1224;
+}
+
+.section p {
+  text-align: center;
+  color: #1c1224;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #b4aeca;
+  border-top: 1px solid #5c4c66;
+  color: #1c1224;
+}
+
+.sound-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#boom {
+  width: 180px;
+  max-width: 100%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.05s ease-in-out;
+}
+
+#boom:active {
+  transform: scale(0.92);
+}
+
+.count-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#count {
+  color: #e63946;
+}
+
+/* 響應式媒體查詢 */
+@media (max-width: 768px) {
+  .name {
+    font-size: 1.8rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  .arrow-btn {
+    font-size: 24px;
+    padding: 2px;
+  }
+}

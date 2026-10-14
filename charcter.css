@@ -1,0 +1,100 @@
+body {
+  background-color: #5e5e5e;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: 
+    radial-gradient(rgba(1, 0, 2, 0.411) 1px, transparent 1px),
+    radial-gradient(rgba(32, 9, 32, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, #444444, #866899);
+  background-size: 20px 20px, 40px 40px, 100% 100%;
+  background-position: 0 0, 10px 10px, 0 0;
+}
+
+nav {
+  padding: 15px 20px;
+  background-color: rgba(15, 7, 7, 0.548);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;         
+  flex-wrap: wrap;   
+  margin-top: 30px; 
+  width: 100%;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 380px;
+  margin-top: 20px;
+}
+
+.text-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e24;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  border: 10px solid rgba(17, 15, 15, 0.685);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/* 桌機版維持滑鼠懸停滑動效果，觸控裝置點擊或懸停皆可 */
+@media (min-width: 769px) {
+  .card-container:hover .photo-layer {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    gap: 20px;
+    margin-left: 0;
+  }
+  .card-container:hover .photo-layer {
+    transform: translateX(-100%);
+  }
+}

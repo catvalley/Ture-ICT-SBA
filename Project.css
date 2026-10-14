@@ -1,0 +1,91 @@
+body {
+  background-color: #444d48;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: 
+    radial-gradient(rgba(1, 0, 2, 0.144) 1px, transparent 2px),
+    radial-gradient(rgba(12, 1, 12, 0.08) 1px, transparent 1px),
+    linear-gradient(150deg, #6e977c, #a06288);
+  background-size: 20px 20px, 40px 40px, 100% 100%;
+  background-position: 0 0, 10px 10px, 0 0;
+}
+
+nav {
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.384);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1.8rem;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.project-place, .project-place-Illustration {
+  padding: 20px;
+  background-color: rgb(173, 175, 174);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.project-place-Illustration {
+  background-color: rgb(32, 34, 33);
+}
+
+.project_img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-place h2, .project-place p,
+.project-place-Illustration h2, .project-place-Illustration p {
+  margin-left: 0 !important; /* 修正原本固定的負邊距，避免跑版 */
+  text-align: left;
+}
+
+.project-place-Illustration-h2 {
+  color: aliceblue;
+}
+
+/* 針對行動裝置優化排版 */
+@media (max-width: 768px) {
+  .project-place, .project-place-Illustration {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .project-place h2, .project-place p,
+  .project-place-Illustration h2, .project-place-Illustration p {
+    text-align: center;
+  }
+}
